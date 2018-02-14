@@ -124,10 +124,10 @@ def play_round(player1, player2, score1, score2, moves1, moves2):
     Returns a 2-tuple with score1 and score2 incremented by this round
     '''
     
-    RELEASE = 0 # (R, "reward" in literature) when both players collude
-    TREAT = 100 # (T, "temptation" in literature) when you betray your partner
-    SEVERE_PUNISHMENT = -500 # (S, "sucker" in literature) when your partner betrays you
-    PUNISHMENT = -250 # (P) when both players betray each other
+    RELEASE = 200 # (R, "reward" in literature) when both players collude
+    TREAT = 300 # (T, "temptation" in literature) when you betray your partner
+    SEVERE_PUNISHMENT = -300 # (S, "sucker" in literature) when your partner betrays you
+    PUNISHMENT = -200 # (P) when both players betray each other
     
     # Keep T > R > P > S to be a Prisoner's Dilemma
     # Keep 2R > T + S to be an Iterative Prisoner's Dilemma
@@ -378,5 +378,5 @@ def post_to_file(string, filename='tournament.txt', directory=''):
  
 ### Call main_play() if this file is executed
 if __name__ == '__main__':
-    scores, moves, reports = main_play(modules[0:4])   
+    scores, moves, reports = main_play(modules[0:7])   
     section0, section1, section2, section3 = reports
