@@ -6,11 +6,18 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+team_name = 'Lance and Angelo' # Only 10 chars displayed.
+strategy_name = 'The old switcharoo'
+strategy_description = 'Opposite of their previous move'
     
 def move(my_history, their_history, my_score, their_score):
+    if their_score == 0 and my_score == 0:
+        return 'b'
+    elif their_history == 'c':
+        return 'b'
+    else:
+        return 'c'
+    
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
     
