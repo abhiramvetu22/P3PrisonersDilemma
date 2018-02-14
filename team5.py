@@ -6,7 +6,7 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'Lance and Angelo' # Only 10 chars displayed.
+team_name = 'ldrita20' # Only 10 chars displayed.
 strategy_name = 'The old switcharoo'
 strategy_description = 'Opposite of their previous move'
     
