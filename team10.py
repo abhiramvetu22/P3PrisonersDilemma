@@ -17,6 +17,10 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. 
     '''
+    #start betrayng, if oppentent betrays twice we switch to collude, then if opponent betrays us twice again switch back to betray for rest
+    
+    
+    
 
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
@@ -26,7 +30,15 @@ def move(my_history, their_history, my_score, their_score):
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
     
-    return 'c'
+    count = their_history.count('b')
+    
+    if len(my_history)==0:
+        return 'b'
+    elif count%2 == 0:
+        return 'b'
+    elif count%2 == 1:
+        return 'c'
+
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
